@@ -1,0 +1,214 @@
+/* ============================================================
+   GCP User Portal – Stylesheet
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Navbar ---- */
+.navbar {
+  background: #1a73e8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a, .nav-user {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Main container ---- */
+.container {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ---- Cards ---- */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem;
+}
+
+.center-card {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.center-card h1 {
+  font-size: 1.9rem;
+  margin-bottom: 0.75rem;
+  color: #1a73e8;
+}
+
+.center-card p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.form-card {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.form-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1a73e8;
+}
+
+.form-card > p {
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ---- Form elements ---- */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: #444;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 3px rgba(26,115,232,0.15);
+}
+
+.form-footer {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #555;
+}
+
+.form-footer a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.btn-primary {
+  background: #1a73e8;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1558b0;
+}
+
+.btn-secondary {
+  background: #e8f0fe;
+  color: #1a73e8;
+}
+
+.btn-secondary:hover {
+  background: #d2e3fc;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---- Alert messages ---- */
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.alert-success  { background: #e6f4ea; color: #1e7e34; border: 1px solid #b7dfbf; }
+.alert-danger   { background: #fce8e6; color: #c5221f; border: 1px solid #f5c6c5; }
+.alert-info     { background: #e8f0fe; color: #1558b0; border: 1px solid #c6d9f8; }
+.alert-warning  { background: #fef7e0; color: #8a6000; border: 1px solid #f9e3a4; }
+
+/* ---- Footer ---- */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #888;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+}

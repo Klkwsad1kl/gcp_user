@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Home – GCP User Portal{% endblock %}
+
+{% block content %}
+<div class="card center-card">
+  <h1>Welcome to GCP User Portal</h1>
+  <p>A simple user management application running on Google Cloud Platform.</p>
+
+  {% if user %}
+    <p>You are logged in as <strong>{{ user.username }}</strong>.</p>
+    <a class="btn btn-secondary" href="{{ url_for('logout') }}">Logout</a>
+  {% else %}
+    <div class="btn-group">
+      <a class="btn btn-primary" href="{{ url_for('signup') }}">Sign Up</a>
+      <a class="btn btn-secondary" href="{{ url_for('login') }}">Login</a>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

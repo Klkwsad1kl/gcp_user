@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Login – GCP User Portal{% endblock %}
+
+{% block content %}
+<div class="card form-card">
+  <h2>Log In</h2>
+  <form method="POST" action="{{ url_for('login') }}" novalidate>
+    <div class="form-group">
+      <label for="identifier">Username or Email</label>
+      <input type="text" id="identifier" name="identifier"
+             value="{{ identifier | default('') }}"
+             placeholder="Username or email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password"
+             placeholder="Your password" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+  </form>
+
+  <p class="form-footer">
+    <a href="{{ url_for('forgot_password') }}">Forgot password?</a> &nbsp;|&nbsp;
+    <a href="{{ url_for('forgot_username') }}">Forgot username?</a>
+  </p>
+  <p class="form-footer">
+    Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a>
+  </p>
+</div>
+{% endblock %}

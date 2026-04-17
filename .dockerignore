@@ -1,0 +1,13 @@
+# .dockerignore – exclude files that don't belong in the container image
+.git
+.gitignore
+*.db
+*.sqlite3
+__pycache__
+*.pyc
+*.pyo
+.venv
+venv
+env
+tests/
+*.md
