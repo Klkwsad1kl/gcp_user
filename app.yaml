@@ -2,6 +2,11 @@ runtime: python312
 
 instance_class: F1
 
+# Environment variables.
+# SECRET_KEY: store this in Google Secret Manager and inject via Cloud Run
+#   or Secret Manager bindings rather than committing it here.
+# DATABASE_PATH: /tmp is ephemeral on App Engine; use Cloud SQL or Firestore
+#   for persistent storage in production.
 env_variables:
   SECRET_KEY: "change-me-in-production"
   DATABASE_PATH: "/tmp/users.db"

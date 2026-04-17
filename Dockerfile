@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY . .
 
-# Initialise the database before starting
+# Initialize the database before starting
 RUN python -c "from app import app, init_db; init_db()"
 
 # Expose port (Cloud Run injects $PORT at runtime)
