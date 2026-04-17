@@ -1,0 +1,5 @@
+#!/bin/zsh
+set -e
+
+APP_URL="${APP_URL:-https://user-account-493600.uc.r.appspot.com}"
+open "$APP_URL"

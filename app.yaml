@@ -1,0 +1,31 @@
+runtime: python312
+
+instance_class: F1
+
+# Environment variables.
+# Non-secret values can be committed here.
+# Real secret values (DB password / Flask secret key) must stay in Secret Manager.
+env_variables:
+  # Flask session signing key (Secret Manager reference, not the raw key)
+  SECRET_KEY_SECRET: "projects/user-account-493600/secrets/flask-secret-key/versions/latest"
+
+  # Cloud SQL instance connection name
+  INSTANCE_CONNECTION_NAME: "user-account-493600:us-central1:userinformation"
+
+  # Database name and DB username used by the app
+  DB_NAME: "User"
+  DB_USER: "User"
+
+  # DB password (Secret Manager reference, not the raw password)
+  DB_PASSWORD_SECRET: "projects/user-account-493600/secrets/db-passwrod/versions/latest"
+
+beta_settings:
+  # Must match INSTANCE_CONNECTION_NAME for Cloud SQL socket mount
+  cloud_sql_instances: user-account-493600:us-central1:userinformation
+
+entrypoint: gunicorn -b :$PORT app:app
+
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  min_instances: 0
+  max_instances: 5
