@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Sign Up – GCP User Portal{% endblock %}
+
+{% block content %}
+<div class="card form-card">
+  <h2>Create an Account</h2>
+  <form method="POST" action="{{ url_for('signup') }}" novalidate>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" value="{{ username|default('') }}" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" value="{{ email|default('') }}" required />
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required />
+
+    <label for="confirm_password">Confirm Password</label>
+    <input type="password" id="confirm_password" name="confirm_password" required />
+
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <p class="form-footer">Already have an account? <a href="{{ url_for('login') }}">Log in</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Forgot Username – GCP User Portal{% endblock %}
+
+{% block content %}
+<div class="card form-card">
+  <h2>Find Your Username</h2>
+  <form method="POST" action="{{ url_for('forgot_username') }}" novalidate>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+    <button type="submit">Find Username</button>
+  </form>
+</div>
+{% endblock %}
